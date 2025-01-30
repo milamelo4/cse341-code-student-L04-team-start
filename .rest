@@ -1,8 +1,48 @@
 ### GET all temples ### 
-
 GET http://localhost:8080/temples
 apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
 
-### GET one temple ###
-GET http://localhost:8080/temples/61a921f6028954d4f0319e6d
+### GET one temple by id ###
+GET http://localhost:8080/temples/401
 apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+
+### Create new temple ###
+POST http://localhost:8080/temples
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+Content-Type: application/json
+
+{    
+    "temple_id": 401,
+    "name": "testing2:19",
+    "location": "Location Not Available",
+    "dedicated": "Announced",    
+    "additionalInfo": false 
+}
+
+### Update temple ###
+PUT http://localhost:8080/temples/679a9b5261a9f5c8869571df
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+Content-Type: application/json
+
+{
+    "id": 401,
+    "name": "Mila",
+    "location": "Location Not Available",
+    "dedicated": "Announced",    
+    "additionalInfo": false
+}
+
+### Delete temple by id ###
+DELETE http://localhost:8080/temples/679a8e6d181071a058efa2d9
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+
+### delete all temples ###
+DELETE http://localhost:8080/temples
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+
+### temple published ###
+GET http://localhost:8080/temples/published
+X-API-KEY: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+
+
+

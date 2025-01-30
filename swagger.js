@@ -10,7 +10,7 @@ const doc = {
 };
 
 const outputFile = "./swagger.json"; // Generated Swagger file
-const endpointsFiles = ["./routes/index.js"]; // Entry points to parse routes
+const endpointsFiles = ["./routes/temple.js"]; // Entry points to parse routes
 
 swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
   console.log("Swagger documentation generated successfully!");
